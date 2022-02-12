@@ -1,0 +1,12 @@
+name: "Check Unlock Membership"
+description: "An action that checks whether the submitter of a pull request owns a valid Unlock membership for configured locks."
+inputs:
+  locks:
+    description: "Lock Config (address and networks)."
+    required: true
+  GITHUB_TOKEN:
+    description: "Github Token"
+    required: true
+runs:
+  using: "node16"
+  main: "index.js"
