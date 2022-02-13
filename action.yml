@@ -1,5 +1,8 @@
 name: "Check Unlock Membership"
 description: "An action that checks whether the submitter of a pull request owns a valid Unlock membership for configured locks."
+branding:
+  icon: https://raw.githubusercontent.com/unlock-protocol/unlock/master/design/brand/PNG/Unlock-LogoMark-Circle.png
+  color: "#ff6771"
 inputs:
   locks:
     description: "Lock Config (address and networks)."
