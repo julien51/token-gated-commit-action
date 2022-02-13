@@ -24,12 +24,11 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
+Make sure you change the `locks` section to include the locks you want to use in your application. This is a JSON object "stringified", with the keys as lock addressesm and the for each value an object including `network` for the corresponding EVM-based networks.
+
 In your Github repo settings, make sure you enable "branch protection" and add the name of the Action to the list of checks that are required:
 <img width="798" alt="Screen Shot 2022-02-12 at 8 48 03 PM" src="https://user-images.githubusercontent.com/17735/153734808-34af4315-6e1e-47d4-a844-7661c6e58c11.png">
 
-
 [Example](https://github.com/julien51/token-gated-commits-example)
-
-Make sure you change the `locks` section to include the locks you want to use in your application. This is a JSON object "stringified", with the keys as lock addressesm and the for each value an object including `network` for the corresponding EVM-based networks.
 
 Final: you can [enable auto-merge for pull-requests](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-auto-merge-for-pull-requests-in-your-repository) if you want to remove any manual admin operation!
